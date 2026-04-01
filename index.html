@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>BT Sports - Arena de Areia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="header-left">
+        <div class="logo">
+            <img src="images/logo.PNG" alt="Logo BT Sports">
+            <span class="brand-name">BT Sports</span>
+        </div>
+    </div>
+    <nav class="header-center">
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#modalidades">Modalidades</a></li>
+            <li><a href="futevolei.html">Futevôlei</a></li>
+            <li><a href="beach-tennis.html">Beach Tennis</a></li>
+            <li><a href="volei.html">Vôlei</a></li>
+        </ul>
+    </nav>
+    <div class="header-right">
+        <a href="https://wa.me/5561992039938" class="btn-header">MARCAR AULAS</a>
+    </div>
+</header>
+
+<main>
+    <section id="sobre" class="hero-section">
+        <div class="container">
+            <div class="hero-text">
+                <span class="tagline">CONHEÇA A NOSSA ARENA</span>
+                <h1>O SEU LUGAR É <br><span class="highlight">NA AREIA</span></h1>
+                <p>A BT Sports nasceu da paixão pelos esportes de areia. Nossa missão é proporcionar saúde, conexão e alta performance em um ambiente de elite.</p>
+                <div class="features-grid">
+    <div class="f-card">
+        <i class="fas fa-dumbbell"></i>
+        <div>
+            <strong>ELITE</strong>
+            <span>Estrutura de ponta</span>
+        </div>
+    </div>
+    <div class="f-card">
+        <i class="fas fa-user-tie"></i>
+        <div>
+            <strong>PROS</strong>
+            <span>Professores certificados</span>
+        </div>
+    </div>
+    <div class="f-card">
+        <i class="fas fa-heartbeat"></i>
+        <div>
+            <strong>SAÚDE</strong>
+            <span>Bem-estar e evolução</span>
+        </div>
+    </div>
+    <div class="f-card">
+        <i class="fas fa-trophy"></i>
+        <div>
+            <strong>TORNEIOS</strong>
+            <span>Eventos exclusivos</span>
+        </div>
+    </div>
+</div>
+                <a href="https://wa.me/5561992039938" class="btn-cta">AGENDAR AULA EXPERIMENTAL</a>
+            </div>
+            <div class="hero-mockup">
+                <div class="iphone-frame">
+                    <div class="carousel">
+                        <div class="slide active"><img src="images/futevolei-1.jpg" alt="Foto Arena 1"></div>
+                        <div class="slide"><img src="images/futevolei-3.jpg" alt="Foto Arena 2"></div>
+                        <div class="slide"><img src="images/futevolei-4.jpg" alt="Foto Arena 3"></div>
+                        <button class="nav-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                        <button class="nav-btn next" onclick="moveSlide(1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modalidades" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Nossas Modalidades</h2>
+            <div class="modalidades-grid">
+                <div class="modalidade-card">
+                    <img src="images/futevolei.jpg" alt="Futevôlei">
+                    <div class="modalidade-info">
+                        <h3>FUTEVÔLEI</h3>
+                        <p>Tradição e performance</p>
+                        <a href="futevolei.html" class="btn-agendar">AGENDAR →</a>
+                    </div>
+                </div>
+                <div class="modalidade-card">
+                    <img src="images/beachtennis.jpg" alt="Beach Tennis">
+                    <div class="modalidade-info">
+                        <h3>BEACH TENNIS</h3>
+                        <p>Agilidade e diversão</p>
+                        <a href="" class="btn-agendar">Novidades em Breve →</a>
+                    </div>
+                </div>
+                <div class="modalidade-card">
+                    <img src="images/volei.jpg" alt="Vôlei">
+                    <div class="modalidade-info">
+                        <h3>VÔLEI DE PRAIA</h3>
+                        <p>Técnica e fundamentos</p>
+                        <a href="volei.html" class="btn-agendar">AGENDAR →</a>
+                    </div>
+                </div>
+                <div class="modalidade-card">
+                    <img src="images/croos2.jpg" alt="Funcional">
+                    <div class="modalidade-info">
+                        <h3>Cross Training</h3>
+                        <p>Performance física</p>
+                        <a href="funcional.html" class="btn-agendar">AGENDAR →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculadoras" class="calc-section">
+        <div class="container">
+            <div class="calc-intro">
+                <h2>PERFORMANCE <span>& SAÚDE</span></h2>
+                <p>Monitore sua evolução com nossas ferramentas exclusivas.</p>
+            </div>
+            <div class="calc-list">
+                <div class="calc-item">
+                    <div class="calc-trigger" onclick="toggleCalc(this)">IMC <i class="fas fa-plus"></i></div>
+                    <div class="calc-panel">
+                        <input type="number" id="pImc" placeholder="Peso (kg)">
+                        <input type="number" id="aImc" placeholder="Altura (cm)">
+                        <button onclick="calcIMC()">Calcular</button>
+                        <p id="resImc" class="res-text"></p>
+                    </div>
+                </div>
+                <div class="calc-item">
+                    <div class="calc-trigger" onclick="toggleCalc(this)">Gasto Calórico Diário <i class="fas fa-plus"></i></div>
+                    <div class="calc-panel">
+                        <input type="number" id="pGasto" placeholder="Peso (kg)">
+                        <button onclick="calcGasto()">Calcular TMB</button>
+                        <p id="resGasto" class="res-text"></p>
+                    </div>
+                </div>
+                <div class="calc-item">
+                    <div class="calc-trigger" onclick="toggleCalc(this)">Frequência Cardíaca Máxima <i class="fas fa-plus"></i></div>
+                    <div class="calc-panel">
+                        <input type="number" id="idade" placeholder="Sua Idade">
+                        <button onclick="calcFC()">Calcular Máxima</button>
+                        <p id="resFc" class="res-text"></p>
+                    </div>
+                </div>
+                <div class="calc-item">
+                    <div class="calc-trigger" onclick="toggleCalc(this)">Carga Máxima (1RM) <i class="fas fa-plus"></i></div>
+                    <div class="calc-panel">
+                        <input type="number" id="pRm" placeholder="Peso (kg)">
+                        <input type="number" id="rRm" placeholder="Repetições">
+                        <button onclick="calcRM()">Calcular Força</button>
+                        <p id="resRm" class="res-text"></p>
+                    </div>
+                </div>
+                <div class="calc-item">
+                    <div class="calc-trigger" onclick="toggleCalc(this)">Carga Interna de Treino <i class="fas fa-plus"></i></div>
+                    <div class="calc-panel">
+                        <input type="number" id="dur" placeholder="Minutos">
+                        <input type="number" id="rpe" placeholder="Esforço (1-10)">
+                        <button onclick="calcCarga()">Calcular Volume</button>
+                        <p id="resCarga" class="res-text"></p>
+                    </div>
+                </div>
+                <div class="calc-item">
+                    <div class="calc-trigger" onclick="toggleCalc(this)">Impulsão (Salto) <i class="fas fa-plus"></i></div>
+                    <div class="calc-panel">
+                        <input type="number" id="s1" placeholder="Alcance Salto (cm)">
+                        <input type="number" id="s2" placeholder="Alcance Parado (cm)">
+                        <button onclick="calcSalto()">Calcular Impulso</button>
+                        <p id="resSalto" class="res-text"></p>
+                    </div>
+                </div>
+                <div class="calc-item">
+                    <div class="calc-trigger" onclick="toggleCalc(this)">Hidratação Recomendada <i class="fas fa-plus"></i></div>
+                    <div class="calc-panel">
+                        <input type="number" id="pHid" placeholder="Peso (kg)">
+                        <button onclick="calcHid()">Calcular Litros</button>
+                        <p id="resHid" class="res-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="instagram">
+   <div class="insta-header">
+    <h2>Acompanhe a BT Sports no Instagram</h2>
+</div>
+
+<div class="insta-grid">
+
+<div class="insta-video">
+<video muted loop playsinline>
+<source src="videos/video1.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="insta-video">
+<video muted loop playsinline>
+<source src="videos/video7.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="insta-video">
+<video muted loop playsinline>
+<source src="videos/video3.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="insta-video">
+<video muted loop playsinline>
+<source src="videos/video4.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="insta-video">
+<video muted loop playsinline>
+<source src="videos/video5.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="insta-video">
+<video muted loop playsinline>
+<source src="videos/video6.mp4" type="video/mp4">
+</video>
+</div>
+<a href="https://www.instagram.com/_btsports_/" target="_blank" class="btn-instagram">
+<i class="fab fa-instagram"></i> Seguir no Instagram
+</a>
+
+</div>
+<section id="localizacao">
+
+<div class="container">
+
+<div class="local-header">
+<h2>Onde Estamos</h2>
+<p>
+Nossa arena fica localizada no <strong>Colégio Inova</strong>, no Sudoeste em Brasília.
+Venha treinar com a gente!
+</p>
+</div>
+
+<div class="local-content">
+
+<div class="local-info">
+<h3>BT Sports Arena</h3>
+
+<p>📍 Colégio Inova</p>
+<p>Sudoeste - Brasília / DF</p>
+
+<a href="https://www.google.com/maps/search/colegio+inova+sudoeste+brasilia" 
+target="_blank" 
+class="btn-maps">
+Abrir no Google Maps
+</a>
+
+</div>
+
+<div class="local-map">
+
+<iframe
+src="https://www.google.com/maps?q=colegio+inova+sudoeste+brasilia&output=embed"
+width="100%"
+height="300"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>
