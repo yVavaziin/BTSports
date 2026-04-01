@@ -1,0 +1,182 @@
+/* ==========================================
+   CONFIGURAÇÕES GERAIS E HEADER
+   ========================================== */
+
+/* BT SPORTS SEMPRE BRANCO */
+.brand-name {
+    color: #ffffff !important;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important;
+}
+
+/* ==========================================
+   SEÇÃO HERO (CROSS2.JPG)
+   ========================================== */
+.hero-funcional {
+    position: relative;
+    /* Alterado para cross2.jpg e ajuste de brilho (0.5) para o texto brilhar mais */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
+                url('../images/cross2.jpg');
+    background-size: cover;
+    background-position: center top; /* Foca no topo da imagem onde geralmente estão os rostos */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Efeito de rolagem elegante (Parallax) */
+    
+    min-height: 85vh;            
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 100px 20px;
+}
+
+.highlight { color: #FF3300; }
+
+.tag {
+    color: #FF3300;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hero-funcional h1 {
+    font-size: clamp(35px, 8vw, 65px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-funcional p {
+    max-width: 750px;
+    margin: 0 auto 35px;
+    font-size: 18px;
+    color: #f1f1f1;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   SEÇÃO DE BENEFÍCIOS
+   ========================================== */
+.beneficios-funcional {
+    background: #fff;
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.info-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.info-text h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.info-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* GRID DE ÍCONES (Resolvido Desalinhamento) */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.stat-item {
+    background: #fcfcfc;
+    padding: 18px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.stat-item:hover {
+    border-color: #FF3300;
+}
+
+.stat-item i {
+    color: #FF3300;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.stat-item strong {
+    display: block;
+    font-size: 14px;
+    color: #111;
+    text-transform: uppercase;
+}
+
+.stat-item span {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.2;
+}
+
+/* ==========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================== */
+@media (max-width: 768px) {
+    .hero-funcional {
+        min-height: 70vh;
+        background-attachment: scroll; /* Desativa parallax no mobile para melhor performance */
+    }
+
+    .info-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .info-image {
+        order: -1; 
+        margin-bottom: 20px;
+    }
+
+    .info-text {
+        text-align: center;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr; /* Crucial para não desalinhar no celular */
+    }
+
+    .stat-item {
+        text-align: left;
+    }
+
+    .hero-funcional h1 {
+        font-size: 36px;
+    }
+}

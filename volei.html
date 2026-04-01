@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT Sports - Vôlei de Praia</title>
+    <link rel="stylesheet" href="css/volei.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container-nav">
+        <a href="index.html" class="btn-voltar">← Voltar para o Início</a>
+        <div class="logo-container">
+            <img src="images/logo.PNG" alt="Logo BT Sports" class="logo-img">
+            <span class="logo-text">BT Sports</span>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-container">
+    <div class="hero-wrapper">
+        <img src="images/futevolei-7.jpg" alt="Vôlei de Praia" class="hero-full-img">
+        <div class="hero-overlay-content">
+            <div class="container">
+                <span class="chamada-topo">TREINE COM OS MELHORES</span>
+                <h1>Vôlei de Praia</h1>
+                <p>A evolução que você busca com a metodologia que você precisa.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="info-section">
+    <div class="container">
+        <h2 class="titulo-sessao">Diferenciais BT Sports</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <i class="fas fa-history"></i>
+                <h3>Flexibilidade</h3>
+                <p>Sistema de reposição de aulas para que você não perca seu ritmo de treino por imprevistos do dia a dia.</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-medal"></i>
+                <h3>Metodologia</h3>
+                <p>Treinos dinâmicos focados em fundamentos, tática de jogo e condicionamento físico específico para areia.</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-users"></i>
+                <h3>Turmas Reduzidas</h3>
+                <p>Garantimos atenção total do professor para cada aluno, acelerando o aprendizado e a correção técnica.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="planos" class="planos">
+    <div class="container">
+        <h2 class="titulo-sessao">Escolha sua frequência e horário</h2>
+        
+        <div class="botoes-frequencia">
+            <button onclick="toggleHorarios('horarios2')" class="btn-frequencia">2 vezes por semana</button>
+            <button onclick="toggleHorarios('horarios4')" class="btn-frequencia">4 vezes por semana</button>
+        </div>
+
+        <div id="horarios2" class="horarios-container">
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 2x - Seg e Qua', 220)">Segunda e Quarta — 17:30 às 18:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 2x - Seg e Qua', 220)">Segunda e Quarta — 18:30 às 19:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 2x - Seg e Qua', 220)">Segunda e Quarta — 19:30 às 20:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 2x - Ter e Qui', 220)">Terça e Quinta — 17:30 às 18:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 2x - Ter e Qui', 220)">Terça e Quinta — 18:30 às 19:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 2x - Ter e Qui', 220)">Terça e Quinta — 19:30 às 20:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 1x - Sexta', 150)">Sexta-feira — 17:30 às 18:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 1x - Sexta', 150)">Sexta-feira — 18:30 às 19:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 1x - Sexta', 150)">Sexta-feira — 19:30 às 20:30</div>
+        </div>
+
+        <div id="horarios4" class="horarios-container">
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 4x por semana', 350)">A combinar (Consulte disponibilidade)</div>
+        </div>
+    </div>
+</section>
+
+<section class="secao-resumo">
+    <div class="container">
+        <div class="resumo-box">
+            <h3>Resumo do Agendamento</h3>
+            <div class="divisor"></div>
+            <div style="text-align: left; margin-bottom: 20px;">
+                <p>📌 <strong>Plano/Horário:</strong> <span id="resumo-plano">Selecione uma opção acima</span></p>
+                <p style="margin-top: 10px; font-size: 0.85rem; color: #555;">* Matrícula e disponibilidade sujeitas a confirmação.</p>
+            </div>
+            <h4 style="font-size: 1.5rem;">Total: R$ <span id="valor-total">0,00</span></h4>
+            <button class="btn-whatsapp" onclick="enviarWhatsApp()">Confirmar Agendamento</button>
+        </div>
+    </div>
+</section>
+
+<script src="js/volei.js"></script>
+</body>
+</html>

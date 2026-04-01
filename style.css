@@ -1,0 +1,877 @@
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+-webkit-tap-highlight-color:transparent;
+}
+
+/* FUNDO PRINCIPAL */
+body { 
+font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+background:#2A2A2A;
+color:#fff;
+overflow-x:hidden;
+line-height:1.6;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:0 20px;
+width:100%;
+}
+
+/* HEADER */
+
+.main-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 5%;
+background:#2A2A2A;
+border-bottom:1px solid #3a3a3a;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+height:45px;
+}
+
+.brand-name{
+font-weight:900;
+font-size:20px;
+letter-spacing:1px;
+text-transform:uppercase;
+}
+
+.header-center ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+.header-center a{
+color:#fff;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+text-transform:uppercase;
+transition:.3s;
+}
+
+.header-center a:hover{
+color:#FF3300;
+}
+
+.btn-header{
+background:#FF3300;
+color:#fff;
+padding:10px 20px;
+border-radius:5px;
+text-decoration:none;
+font-weight:900;
+font-size:12px;
+transition:.3s;
+}
+
+.btn-header:hover{
+background:#ff4d26;
+}
+
+/* HERO */
+
+.hero-section{
+padding:100px 0;
+background:#2A2A2A;
+}
+
+.hero-section .container{
+display:flex;
+align-items:center;
+gap:60px;
+}
+
+.hero-text{
+flex:1.5;
+}
+
+.tagline{
+color:#FF3300;
+font-weight:900;
+letter-spacing:2px;
+font-size:14px;
+}
+
+.hero-text h1{
+font-size:55px;
+line-height:1.1;
+margin:20px 0;
+font-weight:900;
+}
+
+.highlight{
+color:#FF3300;
+}
+
+.hero-text p{
+color:#bbb;
+max-width:500px;
+}
+
+/* BOTAO HERO */
+
+.btn-cta{
+background:#FF3300;
+color:#fff;
+padding:18px 40px;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+transition:.3s;
+margin-top:25px;
+box-shadow:0 10px 20px rgba(255,51,0,0.3);
+}
+
+.btn-cta:hover{
+transform:translateY(-3px);
+}
+
+/* FEATURES GRID */
+
+.features-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin:30px 0;
+}
+
+.f-card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,51,0,0.3);
+padding:15px;
+border-radius:12px;
+display:flex;
+align-items:center;
+gap:12px;
+transition:.3s;
+}
+
+.f-card:hover{
+border-color:#FF3300;
+background:rgba(255,51,0,0.1);
+}
+
+.f-card i{
+color:#FF3300;
+font-size:20px;
+}
+
+.f-card strong{
+display:block;
+font-size:14px;
+text-transform:uppercase;
+}
+
+.f-card span{
+font-size:11px;
+color:#aaa;
+}
+
+/* IPHONE */
+
+.iphone-frame{
+width:300px;
+height:600px;
+border:12px solid #222;
+border-radius:45px;
+overflow:hidden;
+background:#111;
+position:relative;
+box-shadow:0 25px 50px rgba(0,0,0,0.8);
+}
+
+.carousel{
+height:100%;
+width:100%;
+position:relative;
+}
+
+.slide{
+display:none;
+height:100%;
+width:100%;
+}
+
+.slide.active{
+display:block;
+animation:fadeEffect .6s;
+}
+
+.slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+@keyframes fadeEffect{
+from{opacity:.5}
+to{opacity:1}
+}
+
+.nav-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+padding:15px 10px;
+cursor:pointer;
+font-size:20px;
+}
+
+.prev{
+left:0;
+border-radius:0 5px 5px 0;
+}
+
+.next{
+right:0;
+border-radius:5px 0 0 5px;
+}
+
+/* MODALIDADES */
+
+#modalidades{
+background:#ffffff;
+color:#000;
+padding:100px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+font-weight:900;
+margin-bottom:50px;
+}
+
+.modalidades-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+}
+
+.modalidade-card{
+position:relative;
+height:360px;
+border-radius:20px;
+overflow:hidden;
+cursor:pointer;
+}
+
+.modalidade-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+}
+
+.modalidade-card:hover img{
+transform:scale(1.1);
+}
+
+.modalidade-info{
+position:absolute;
+bottom:0;
+width:100%;
+padding:20px;
+background:linear-gradient(transparent,rgba(0,0,0,.9));
+}
+
+.modalidade-info h3{
+font-size:22px;
+color:#fff;
+}
+
+.modalidade-info p{
+font-size:13px;
+color:#ccc;
+margin-bottom:10px;
+}
+
+.btn-agendar{
+text-decoration:none;
+font-size:12px;
+font-weight:bold;
+color:white;
+background:#FF3300;
+padding:8px 14px;
+border-radius:6px;
+}
+
+/* CALCULADORAS */
+
+.calc-section{
+background:#F8F8F8;
+color:#222;
+padding:100px 0;
+}
+
+.calc-intro{
+text-align:center;
+margin-bottom:50px;
+}
+
+.calc-intro h2{
+font-size:32px;
+font-weight:900;
+}
+
+.calc-intro span{
+color:#FF3300;
+}
+
+.calc-list{
+max-width:650px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.calc-item{
+background:#fff;
+border-radius:12px;
+border:1px solid #ddd;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,0.05);
+}
+
+.calc-trigger{
+padding:22px;
+font-weight:bold;
+cursor:pointer;
+display:flex;
+justify-content:space-between;
+align-items:center;
+transition:.3s;
+}
+
+.calc-trigger:hover{
+background:#fffcfb;
+color:#FF3300;
+}
+
+.calc-panel{
+display:none;
+padding:25px;
+flex-direction:column;
+gap:15px;
+border-top:1px solid #eee;
+}
+
+.calc-panel input{
+padding:14px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:16px;
+outline:none;
+}
+
+.calc-panel button{
+background:#222;
+color:#fff;
+border:none;
+padding:15px;
+border-radius:8px;
+cursor:pointer;
+font-weight:900;
+text-transform:uppercase;
+transition:.3s;
+}
+
+.calc-panel button:hover{
+background:#FF3300;
+}
+
+.res-text{
+color:#FF3300;
+font-weight:900;
+font-size:18px;
+text-align:center;
+padding-top:10px;
+}
+
+/* INSTAGRAM */
+
+.insta-header{
+text-align:center;
+font-weight:900;
+font-size:22px;
+margin-bottom:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+}
+
+.insta-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
+
+.insta-video{
+width:100%;
+aspect-ratio:1/1;
+border-radius:15px;
+overflow:hidden;
+background:#111;
+}
+
+.insta-video video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.btn-insta-link{
+display:block;
+max-width:300px;
+margin:40px auto 0;
+text-align:center;
+background:#fff;
+color:#000;
+padding:15px;
+border-radius:10px;
+text-decoration:none;
+font-weight:900;
+transition:.3s;
+}
+
+.btn-insta-link:hover{
+background:#FF3300;
+color:#fff;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:992px){
+
+.hero-section .container{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:42px;
+}
+
+.iphone-frame{
+margin:auto;
+width:260px;
+height:520px;
+}
+
+.modalidades-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.header-center{
+display:none;
+}
+
+.modalidades-grid{
+grid-template-columns:1fr;
+}
+
+.insta-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:480px){
+
+.features-grid{
+grid-template-columns:1fr;
+}
+
+}
+/* INSTAGRAM SECTION */
+
+.instagram-section{
+background:#ffffff;
+padding:120px 0;
+text-align:center;
+}
+
+.insta-header{
+margin-bottom:50px;
+}
+
+.insta-header i{
+font-size:40px;
+color:#FF3300;
+margin-bottom:10px;
+display:block;
+}
+
+.insta-header h2{
+font-size:36px;
+font-weight:900;
+color:#111;
+margin-bottom:10px;
+}
+
+.insta-header p{
+color:#666;
+font-size:15px;
+}
+
+/* GRID VIDEOS */
+
+.insta-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin-top:40px;
+}
+
+.insta-video{
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+transition:0.4s;
+cursor:pointer;
+}
+
+.insta-video:hover{
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 20px 45px rgba(0,0,0,0.25);
+}
+
+.insta-video video{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+/* ==========================================
+   SEÇÃO INSTAGRAM - VERSÃO FINAL E COMPLETA
+   ========================================== */
+
+#instagram, .instagram-section {
+    background: #ffffff !important; 
+    padding: 100px 20px;
+    text-align: center;
+    color: #111; /* Garante que o padrão da seção seja texto escuro */
+}
+
+/* Ajuste do Cabeçalho */
+.insta-header {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.insta-header i {
+    font-size: 45px;
+    color: #FF3300;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.insta-header h2 {
+    font-size: 38px;
+    font-weight: 900;
+    color: #111 !important;
+    margin-bottom: 15px;
+}
+
+/* O TEXTO QUE ESTAVA SUMIDO */
+.insta-header p {
+    color: #333333 !important; /* Cinza bem escuro e visível */
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    max-width: 650px;
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+/* Grid de Vídeos Estilo Reels */
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.insta-video {
+    height: 480px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+    position: relative;
+}
+
+.insta-video:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(255, 51, 0, 0.2);
+}
+
+.insta-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%; /* Foco no topo para futevôlei */
+}
+
+/* Botão de Chamada para Ação */
+.btn-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 50px;
+    padding: 18px 40px;
+    background: #FF3300;
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(255, 51, 0, 0.3);
+}
+
+.btn-instagram:hover {
+    background: #e12b00;
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   AJUSTE FINAL PARA REELS NO CELULAR
+   ========================================== */
+@media (max-width: 768px) {
+    #instagram, .instagram-section {
+    background: #ffffff !important; 
+    padding: 60px 20px 40px; /* menos espaço embaixo */
+}
+
+    .insta-grid {
+        display: flex; /* Mudamos para flex para melhor controle */
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .insta-video {
+        width: 100%; 
+        max-width: 340px; /* Largura ideal de um Reels no iPhone/Android */
+        height: 600px; /* Altura real de um vídeo vertical */
+        border-radius: 25px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        margin: 0 auto;
+    }
+
+    .insta-video video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Preenche o Reels inteiro */
+        object-position: center; /* Centraliza a ação do futevôlei */
+    }
+
+    .insta-header h2 {
+        font-size: 28px;
+        padding: 0 10px;
+    }
+
+    .insta-header p {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .btn-instagram {
+        width: 90%;
+        margin: 30px auto;
+        padding: 15px;
+    }
+}
+/* ==========================================
+   SEÇÃO LOCALIZAÇÃO (Melhorada para Visibilidade)
+   ========================================== */
+#localizacao {
+    background: #f8f9fa; /* Cinza bem leve para contraste */
+    padding: 110px 20px;
+}
+
+.local-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.local-header h2 {
+    font-size: 38px;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 15px;
+}
+
+.local-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1100px;
+    margin: auto;
+    align-items: center;
+    background: #fff;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08); /* Card de destaque */
+}
+
+.local-info h3 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #111;
+    font-weight: 900;
+}
+
+.local-info p {
+    font-size: 18px;
+    color: #333 !important; /* Cor forte para leitura total */
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.local-info strong {
+    color: #FF3300; /* Destaque no nome do colégio */
+    font-size: 20px;
+}
+
+.btn-maps {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 16px 35px;
+    background: #FF3300;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 8px 15px rgba(255, 51, 0, 0.2);
+}
+
+.btn-maps:hover {
+    background: #e12b00;
+    transform: translateY(-3px);
+}
+
+.local-map iframe {
+    border-radius: 20px;
+    width: 100%;
+    height: 400px;
+    border: 0;
+}
+
+/* ==========================================
+   AJUSTES MOBILE (Abaixo de 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    #instagram, #localizacao {
+        padding: 60px 15px;
+    }
+
+    .insta-header h2, .local-header h2 {
+        font-size: 28px;
+    }
+
+    .insta-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .insta-video {
+        height: 450px; /* Mantém o estilo Reels no celular */
+    }
+
+    .local-content {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .local-info h3 {
+        font-size: 26px;
+    }
+
+    .btn-instagram, .btn-maps {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+#instagram .insta-header p {
+    color: #222222 !important; /* Força a cor preta suave */
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    max-width: 600px;
+    margin: 20px auto 0 auto !important;
+    opacity: 1 !important; /* Garante que não esteja transparente */
+    display: block !important;
+}
+/* Media Query para Celulares */
+@media (max-width: 768px) {
+  .features-grid {
+    /* Transforma as 2 colunas em 1 única coluna no mobile */
+    grid-template-columns: 1fr; 
+    gap: 10px;
+  }
+
+  .f-card {
+    /* Garante que o ícone e o texto fiquem sempre alinhados ao centro verticalmente */
+    display: flex;
+    align-items: center; 
+    text-align: left;
+    padding: 20px; /* Um pouco mais de respiro */
+  }
+
+  .hero-text h1 {
+    font-size: 32px; /* Reduz o título para não quebrar feio no mobile */
+  }
+}.insta-header a i {
+    font-size: 40px;
+    color: #FF3300;
+    transition: all 0.3s ease;
+}
+
+/* Hover (quando passa o mouse) */
+.insta-header a:hover i {
+    transform: scale(1.2);
+    background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Quando clica */
+.insta-header a:active i {
+    transform: scale(0.95);
+}

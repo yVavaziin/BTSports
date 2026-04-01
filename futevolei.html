@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT Sports - Futevôlei</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/futevolei.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="container-nav">
+        <a href="index.html" class="btn-voltar">← Voltar para o Início</a>
+        <div class="logo-container">
+            <img src="images/logo.PNG" alt="Logo BT Sports" class="logo-img">
+            <span class="logo-text">BT Sports</span>
+        </div>
+    </div>
+</nav>
+
+<section class="hero-simples">
+    <div class="container">
+        <span class="chamada-topo">TREINE COM OS MELHORES</span>
+        <h1>Treinamento de Futevôlei</h1>
+        <p>Escolha o plano ideal para sua evolução e domine as quadras com a BT Sports.</p>
+    </div>
+</section>
+
+<section class="beneficios-esporte">
+    <div class="container">
+        <div class="grid-beneficios">
+            <div class="item-beneficio">
+                <i class="fas fa-bolt"></i>
+                <h3>Performance</h3>
+                <p>Treinos focados em agilidade e técnica para você evoluir rápido.</p>
+            </div>
+            <div class="item-beneficio">
+                <i class="fas fa-users"></i>
+                <h3>Comunidade</h3>
+                <p>Faça parte de um grupo apaixonado pelo esporte de areia.</p>
+            </div>
+            <div class="item-beneficio">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Bem-estar</h3>
+                <p>Saúde física e mental com acompanhamento profissional.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="niveis-section">
+    <div class="container">
+        <h2 class="titulo-sessao">Qual o seu nível?</h2>
+        <div class="niveis-grid">
+            <div class="nivel-box" onclick="selecionarNivel(this, 'Iniciante')">
+                <span class="tag-nivel">Iniciante</span>
+                <h3>O Começo</h3>
+                <p>Aprenda do zero: fundamentos de toque e posicionamento.</p>
+            </div>
+            <div class="nivel-box" onclick="selecionarNivel(this, 'Intermediário')">
+                <span class="tag-nivel">Intermediário</span>
+                <h3>A Evolução</h3>
+                <p>Para quem já joga e quer dominar ataques e táticas.</p>
+            </div>
+            <div class="nivel-box" onclick="selecionarNivel(this, 'Avançado')">
+                <span class="tag-nivel">Avançado</span>
+                <h3>Performance</h3>
+                <p>Treinos intensos e foco em competições.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="planos" class="planos">
+    <div class="container">
+        <div class="botoes-frequencia">
+            <button onclick="toggleHorarios('horarios2')" class="btn-frequencia">2 vezes por semana</button>
+            <button onclick="toggleHorarios('horarios4')" class="btn-frequencia">4 vezes por semana</button>
+        </div>
+
+        <div id="horarios2" class="horarios-container">
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Futevôlei 2x - Seg e Qua', 220)">Segunda e Quarta — 17:30 às 18:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Futevôlei 2x - Seg e Qua', 220)">Segunda e Quarta — 18:30 às 19:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Futevôlei 2x - Seg e Qua', 220)">Segunda e Quarta — 19:30 às 20:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Futevôlei 2x - Ter e Qui', 220)">Terça e Quinta — 17:30 às 18:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Futevôlei 2x - Ter e Qui', 220)">Terça e Quinta — 18:30 às 19:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Futevôlei 2x - Ter e Qui', 220)">Terça e Quinta — 19:30 às 20:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 1x - Sexta', 150)">Sexta-feira — 17:30 às 18:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 1x - Sexta', 150)">Sexta-feira — 18:30 às 19:30</div>
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Vôlei 1x - Sexta', 150)">Sexta-feira — 19:30 às 20:30</div>
+</div>
+        </div>
+
+        <div id="horarios4" class="horarios-container">
+            <div class="horario-opcao" onclick="selecionarHorario(this, 'Futevôlei 4x por semana', 350)">A combinar (Consulte disponibilidade)</div>
+        </div>
+    </div>
+</section>
+
+<section class="secao-resumo">
+    <div class="container">
+        <div class="resumo-box">
+            <h3>Resumo do Agendamento</h3>
+            <div class="divisor"></div>
+            <div style="text-align: left; margin-bottom: 20px;">
+                <p>⭐ <strong>Nível:</strong> <span id="resumo-nivel">Não selecionado</span></p>
+                <p>📌 <strong>Plano/Horário:</strong> <span id="resumo-plano">Selecione uma opção</span></p>
+            </div>
+            <h4>Total: R$ <span id="valor-total">0,00</span></h4>
+            <button class="btn-whatsapp" onclick="enviarWhatsApp()">Confirmar Agendamento</button>
+        </div>
+    </div>
+</section>
+
+<script src="js/futevolei.js"></script>
+</body>
+</html>
